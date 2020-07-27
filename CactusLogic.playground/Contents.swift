@@ -4,11 +4,6 @@ class CountdownTimer {
     var timer: Timer?
     var secondsLeft: Int
     
-    deinit {
-        timer?.invalidate()
-        timer = nil
-    }
-    
     let secondsLeftChangedHandler: (Int) -> Void
     
     init(durationInSeconds: Int, secondsLeftChangedHandler: @escaping (Int) -> Void) {
